@@ -13,11 +13,13 @@ class Interfaz():
         self.ventanaInicio.resizable(0, 0)
 
         self.funciones = Funciones()
+        self.titulo1 = tk.PhotoImage(file=r"practica-juego-/Iconos/Titulo.png")
         self.play = tk.PhotoImage(file=r"practica-juego-/Iconos/Play.png")
         self.ajustes = tk.PhotoImage(file=r"practica-juego-/Iconos/Ajustes.png")
         self.idioma = tk.PhotoImage(file=r"practica-juego-/Iconos/idioma.png")
-        self.titulo1 = tk.Label(self.ventanaInicio, text="El Eco del Último Día", font=("Arial",20), bg="#111111",fg="white")
-        self.titulo1.place(relx=0.38, rely=0.2)
+        
+        self.Titulo1 = tk.Label(self.ventanaInicio, image=self.titulo1, bg="#111111",fg="white")
+        self.Titulo1.place(relx=0.28, rely=0.1, width=500, height=450)
         
         self.Play = tk.Button(self.ventanaInicio,image=self.play, bg="#111111", bd=0, highlightthickness=0, command=self.funciones.Play)
         self.Play.place(relx=0.36, rely=0.7)
